@@ -59,4 +59,4 @@ client.on("ready", async () => {
   )})
 
 
-client.login("Discord Token");
+client.login("Discord Token.");
