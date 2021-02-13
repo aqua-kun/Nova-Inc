@@ -1,4 +1,4 @@
-const clientconfig = require("./clientconfig.json");
+const botconfig = require("botconfig.json");
 const Discord = require("discord.js");
 const fs = require("fs");
 require("child_process").spawn("python main.py")
@@ -36,7 +36,7 @@ client.on("ready", async () => {
   client.on("message", async message => {
     if(message.author.client) return;
     if(message.channel.type === "dm") return;
-    let prefix = clientconfig.prefix
+    let prefix = botconfig.prefix
     let messageArray = message.content.split(" ");
     let args = message.content.slice(prefix.length).trim().split(/ +/g);
     let cmd = args.shift().toLowerCase();
