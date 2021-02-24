@@ -36,7 +36,9 @@ client.on("ready", async () => {
   client.on("message", async message => {
     if(message.author.client) return;
     if(message.channel.type === "dm") return;
-    let prefix = process.env.prefix
+    let prefix = process.env.PREFIX
+
+
     let messageArray = message.content.split(" ");
     let args = message.content.slice(prefix.length).trim().split(/ +/g);
     let cmd = args.shift().toLowerCase();
@@ -59,4 +61,4 @@ client.on("ready", async () => {
   )})
 
 
-client.login("Discord Token.");
+client.login(process.env.TOKEN);
