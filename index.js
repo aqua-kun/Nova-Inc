@@ -1,7 +1,6 @@
 
 const Discord = require("discord.js");
 const fs = require("fs");
-require("child_process").spawn("python main.py")
 const client = new Discord.Client({disableEveryone: true});
 
 client.commands = new Discord.Collection();
