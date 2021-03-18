@@ -1,0 +1,15 @@
+{
+  "name": "nova-inc",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "dependencies": {
+      "discord.js": "^12.5.1",
+      "quick.db": "^7.1.3"
+  }
+  "author": "aqua kun",
+  "license": "ISC"
+}
