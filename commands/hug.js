@@ -2,8 +2,9 @@ const Discord = require ('discord.js')
 var neko = require('nekos.life');
 var {sfw} = new neko();
 module.exports.run = async(client, message, args) => {
+    const user = message.mentions.users.first() || message.author
     const emb = new Discord.MessageEmbed()
-    .setDescription(`****Кристина обняла ` + args.join(" ") ? `<@${message.mentions.users.first()}> <3****` : "тебя <3****")
+    .setDescription(`****Кристина обняла****`)
     .setColor(0x00ff00)
     .setImage(await sfw.hug().url);
     message.channel.send(emb)
