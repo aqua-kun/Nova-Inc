@@ -9,6 +9,6 @@ module.exports.run = async(client, message, args) => {
 
 }
 module.exports.config = {
-    name: "tiktok-user"
+    name: "tiktok-user",
     aliases: ['ttuser', 'tiktokuser', 'tt-user']
 }
