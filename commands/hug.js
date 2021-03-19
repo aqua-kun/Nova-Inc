@@ -8,6 +8,7 @@ module.exports.run = async(client, message, args) => {
     .setColor(0x00ff00)
     .setImage(await sfw.hug().url);
     message.channel.send(emb)
+    console.log(await sfw.hug().url)
 }
 module.exports.config = {
     name: "hug",
