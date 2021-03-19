@@ -30,7 +30,7 @@ client.on("ready", async () => {
   console.log(`${client.user.username} is online on ${client.guilds.cache.size} servers!`);
   client.user.setActivity(`In Development...`);
   client.user.setStatus('dnd');
-
+});
   client.on("message", async message => {
     if(message.author.client) return;
     if(message.channel.type === "dm") return;
@@ -55,8 +55,7 @@ client.on("ready", async () => {
     commandfile.run(client, message, args);
   
   } catch (e) {
-  }}
-  )})
+  }})
 
 
 client.login(process.env.TOKEN);
