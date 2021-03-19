@@ -1,4 +1,3 @@
-
 const Discord = require("discord.js");
 const fs = require("fs");
 const client = new Discord.Client({disableEveryone: true});
@@ -28,7 +27,7 @@ fs.readdir("./commands/", (err, files) => {
 });
 })
 client.on("ready", async () => {
-  console.log(`${client.user.username} is online on ${client.guilds.size} servers!`);
+  console.log(`${client.user.username} is online on ${client.guilds.cache.size} servers!`);
   client.user.setActivity(`In Development...`);
   client.user.setStatus('dnd');
 
@@ -60,4 +59,4 @@ client.on("ready", async () => {
   )})
 
 
-client.login(process.env.TOKEN);
+client.login(for(i in process.env.TOKEN) process.env.TOKEN[i]);
