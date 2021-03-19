@@ -6,7 +6,7 @@ module.exports.run = async(client, message, args) => {
     const emb = new Discord.MessageEmbed()
     .setDescription(`****Кристина обняла ${user} <3****`.replace(`${message.author}`, "тебя"))
     .setColor(0x00ff00)
-    .setImage(await sfw.hug().then(u => url));
+    .setImage(await sfw.hug().then(u => u.url));
     message.channel.send(emb)
     message.channel.send(await sfw.hug())
 }
