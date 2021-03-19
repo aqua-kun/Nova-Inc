@@ -55,6 +55,7 @@ client.on("ready", async () => {
     commandfile.run(client, message, args);
   
   } catch (e) {
+      console.log(e)
   }})
 
 
