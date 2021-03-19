@@ -7,6 +7,8 @@ module.exports.run = async(client, message, args) => {
     const userInfo = await tiktokApp.getUserInfo(user);
     console.log(userInfo)
 
-      
-})();
+}
+module.exports.config = {
+    name: "tiktok-user"
+    aliases: ['ttuser', 'tiktokuser', 'tt-user']
 }
