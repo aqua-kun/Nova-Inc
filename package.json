@@ -9,7 +9,8 @@
   "dependencies": {
       "discord.js": "^12.5.1",
       "quick.db": "^7.1.3",
-      "tiktok-app-api": "^1.4.1"
+      "tiktok-app-api": "^1.4.1",
+      "nekos.life": "^2.0.7"
   },
   "author": "aqua kun",
   "license": "ISC"
