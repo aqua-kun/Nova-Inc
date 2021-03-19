@@ -34,7 +34,7 @@ client.on("ready", async () => {
   client.on("message", async message => {
     if(message.author.client) return;
     if(message.channel.type === "dm") return;
-    let prefix = process.env.PREFIX
+    let prefix = ">"
 
 
     let messageArray = message.content.split(" ");
