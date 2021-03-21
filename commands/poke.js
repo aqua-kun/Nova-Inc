@@ -11,6 +11,6 @@ module.exports.run = async(client, message, args) => {
     message.channel.send(await sfw.hug())
 }
 module.exports.config = {
-    name: "hug",
+    name: "poke",
     aliases: [""]
 }
