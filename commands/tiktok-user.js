@@ -4,7 +4,7 @@ module.exports.run = async(client, message, args) => {
     var argss = args.join(/ +/g);
     argss = argss.replace(/ +/g, "");
     argss = argss.slice(length)
-    const stats = await new tiktok.Stats(argss).getStats();
+    const stats = await new tiktok.Stats("fouand").getStats();
     console.log(stats)
 }
 module.exports.config = {
