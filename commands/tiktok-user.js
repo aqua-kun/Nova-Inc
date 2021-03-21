@@ -5,7 +5,9 @@ module.exports.run = async(client, message, args) => {
     argss = argss.replace(/ +/g, "");
     argss = argss.slice(length)
     const stats = await new tiktok.Stats("fouand").getStats();
-    console.log(stats)
+    const emb = new Discord.MessageEmbed()
+    .setImage(stats.user.avatar)
+    message.channel.send(emb)
 }
 module.exports.config = {
     name: "tiktok-user",
