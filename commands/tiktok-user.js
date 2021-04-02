@@ -1,7 +1,7 @@
 const tiktok = require ("tiktok-stats");
 module.exports.run = async(client, message, args) => {
-    const usr = args.join(" ").replace(" ", "")
     try {
+    const usr = args.join(" ").replace(" ", "")
     await new tiktok.Stats(usr).getStats().then(s => {
     const emb = new Discord.MessageEmbed()
     .setThumbnail(s.user.avatar)
@@ -9,7 +9,7 @@ module.exports.run = async(client, message, args) => {
     message.channel.send(emb)
     
     })
-    } catch(e) console.log(e)
+    } catch(e) { console.log(e)}
 }
 module.exports.config = {
     name: "tiktok-user",
