@@ -2,7 +2,7 @@ const Discord = require("discord.js")
 const fs = require("fs")
 const { inspect } = require('util')
 module.exports.run = async (client, message, args) => {
-const ownerID = '736174044499673140'
+const ownerID = '749221870754070549'
 
 
     if(message.author.id == ownerID) {           
