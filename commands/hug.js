@@ -4,7 +4,7 @@ var {sfw} = new neko();
 module.exports.run = async(client, message, args) => {
     const user = message.mentions.users.first() || message.author
     const emb = new Discord.MessageEmbed()
-    .setDescription(`****Кристина обняла ${user} <3****`.replace(`${message.author}`, "тебя"))
+    .setDescription(`****Бади обнял ${user} <3****`.replace(`${message.author}`, "тебя"))
     .setColor(0x00ff00)
     .setImage(await sfw.hug().then(u => u.url));
     message.channel.send(emb)
