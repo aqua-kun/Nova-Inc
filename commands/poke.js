@@ -8,7 +8,6 @@ module.exports.run = async(client, message, args) => {
     .setColor(0x00ff00)
     .setImage(await sfw.poke().then(u => u.url));
     message.channel.send(emb)
-    message.channel.send(await sfw.hug())
 }
 module.exports.config = {
     name: "poke",
