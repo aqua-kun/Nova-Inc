@@ -4,12 +4,12 @@ var {sfw} = new neko();
 module.exports.run = async(client, message, args) => {
     const user = message.mentions.users.first() || message.author
     const emb = new Discord.MessageEmbed()
-    .setDescription(`****${message.author.mention} выглядит самодовольно <3****`)
+    .setDescription(`****<@${message.author}> выглядит самодовольно <3****`)
     .setColor(0x00ff00)
     .setImage(await sfw.smug().then(u => u.url));
     message.channel.send(emb)
 }
 module.exports.config = {
-    name: "poke",
+    name: "smug",
     aliases: [""]
 }
