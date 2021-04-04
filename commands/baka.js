@@ -2,7 +2,7 @@ const Discord = require ('discord.js')
 var neko = require('nekos.life');
 var {sfw} = new neko();
 module.exports.run = async(client, message, args) => {
-    const user = message.mentions.users.first() == message.author ? return message.channel.send('ты не дурак <3') : message.mentions.users.first()|| message.author
+    const user = message.mentions.users.first() == message.author ? return message.channel.send('ты не дурак <3') : message.mentions.users.first() ||| message.author
     
     const emb = new Discord.MessageEmbed()
     .setDescription(`****${message.author} обозвал дураком ${user}<3****`).replace(message.author, 'кого-то')
@@ -11,6 +11,6 @@ module.exports.run = async(client, message, args) => {
     message.channel.send(emb)
 }
 module.exports.config = {
-    name: "smug",
+    name: "baka",
     aliases: [""]
 }
