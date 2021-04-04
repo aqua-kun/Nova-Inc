@@ -6,7 +6,7 @@ module.exports.run = async(client, message, args) => {
     message.mentions.users.first() == message.author ? '' : myfunc()
     async function myfunc() {
     const emb = new Discord.MessageEmbed()
-    .setDescription(`****${message.author} обозвал дураком ${user}<3****`).replace(message.author, 'кого-то')
+    .setDescription(`****${message.author} обозвал дураком ${user}<3****`.replace(message.author, 'кого-то'))
     .setColor(0x00ff00)
     .setImage(await sfw.baka().then(u => u.url));
     message.channel.send(emb)
