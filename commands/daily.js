@@ -14,12 +14,12 @@ module.exports.run = async (bot, message, args) => {
   if (daily !== null && timeout - (Date.now() - daily) > 0) {
     let time = ms(timeout - (Date.now() - daily));
   
-    let timeEmbed = new Discord.RichEmbed()
+    let timeEmbed = new Discord.MessageEmbed()
     .setColor("#00ff00")
     .setDescription(`****❌  Вы уже забрали свою награду\n\nЗаберите её через {time.hours}час ${time.minutes}мин ${time.seconds}сек ****`);
     message.channel.send(timeEmbed)
   } else {
-    let moneyEmbed = new Discord.RichEmbed()
+    let moneyEmbed = new Discord.MessageEmbed()
   .setColor("#FFFFFF")
   .setDescription(`****Вы получили ${amount} <a:money:828209980787916830>****`);
   message.channel.send(moneyEmbed)
