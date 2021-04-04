@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
   let user = message.author;
 
   let timeout = 86400000;
-  let amount = 200;
+  let amount = Math.floor(Math.random() * 1000)
 
   let daily = await db.fetch(`daily_${message.guild.id}_${user.id}`);
 
@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
   
     let timeEmbed = new Discord.MessageEmbed()
     .setColor("#00ff00")
-    .setDescription(`****❌  Вы уже забрали свою награду\n\nЗаберите её через {time.hours}час ${time.minutes}мин ${time.seconds}сек ****`);
+    .setDescription(`****❌  Вы уже забрали свою награду\n\nЗаберите её через ${time.hours}час ${time.minutes}мин ${time.seconds}сек ****`);
     message.channel.send(timeEmbed)
   } else {
     let moneyEmbed = new Discord.MessageEmbed()
