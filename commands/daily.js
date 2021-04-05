@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
   } else {
     let moneyEmbed = new Discord.MessageEmbed()
   .setColor("#FFFFFF")
-  .setDescription(`****Вы получили ${amount} <a:money:828209980787916830>****`);
+  .setDescription(`****Вы получили ${amount} <a:money:828644606606180433>****`);
   message.channel.send(moneyEmbed)
   db.add(`money_${message.guild.id}_${user.id}`, amount)
   db.set(`daily_${message.guild.id}_${user.id}`, Date.now())
