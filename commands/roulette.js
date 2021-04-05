@@ -67,7 +67,7 @@ let colorbad = new Discord.MessageEmbed()
     } else { // Wrong
         db.subtract(`money_${message.guild.id}_${user.id}`, money)
         let moneyEmbed4 = new Discord.MessageEmbed()
-        .setColor("#00ff00")
+        .setColor("#ff0000")
         .setDescription(`****Ты проиграл ${money} <a:money:828644606606180433>\n\nСтавка: 0x****`);
         message.channel.send(moneyEmbed4)
     }
