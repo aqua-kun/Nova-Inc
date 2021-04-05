@@ -5,7 +5,7 @@ module.exports.run = async (client, message, args) => {
 
   let user = message.mentions.users.first() || message.author;
 
-  let bal = db.fetch(`money_${message.guild.id}_${user.id}`)
+  let bal = db.get(`money_${message.guild.id}_${user.id}`)
 
   if (bal === null) bal = 0;
 
