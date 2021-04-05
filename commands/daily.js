@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
   
     let timeEmbed = new Discord.MessageEmbed()
     .setColor("#00ff00")
-    .setDescription(`****❌  Вы уже забрали свою награду\n\nЗаберите её через ${time.hours}час ${time.minutes}мин ${time.seconds}сек ****`);
+    .setDescription(`****:x: Вы уже забрали свою награду\n\nЗаберите её через ${time.hours}час ${time.minutes}мин ${time.seconds}сек ****`);
     message.channel.send(timeEmbed)
   } else {
     let moneyEmbed = new Discord.MessageEmbed()
