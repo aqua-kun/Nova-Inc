@@ -15,7 +15,7 @@ module.exports.run = async (client, message, args) => {
   let moneyEmbed = new Discord.MessageEmbed()
   .setColor("#00ff00")
   .setAuthor(user.username, user.displayAvatarURL({format: "png"}))
-  .setDescription(`****На счету: ${bal} <a:money:828209980787916830>\nВ банке: ${bank} <a:money:828209980787916830>****`);
+  .setDescription(`****На счету: ${bal} <a:money:828644606606180433>\nВ банке: ${bank} <a:money:828644606606180433><a:money:828644606606180433>****`);
   message.channel.send(moneyEmbed)
 };
 
