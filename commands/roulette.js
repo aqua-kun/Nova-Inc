@@ -47,28 +47,28 @@ let colorbad = new Discord.MessageEmbed()
         db.add(`money_${message.guild.id}_${user.id}`, money)
         let moneyEmbed1 = new Discord.MessageEmbed()
         .setColor("#00ff00")
-        .setDescription(`****Ты выиграл ${money} coins\n\nСтавка: 15x****`);
+        .setDescription(`****Ты выиграл ${money} <a:money:828644606606180433>\n\nСтавка: 15x****`);
         message.channel.send(moneyEmbed1)
-        console.log(`${message.author.tag} выиграл ${money} coins на зелёном`)
+        console.log(`${message.author.tag} выиграл ${money} <a:money:828644606606180433> на зелёном`)
     } else if (isOdd(random) && colour == 1) { // Red
         money = parseInt(money * 1.5)
         db.add(`money_${message.guild.id}_${user.id}`, money)
         let moneyEmbed2 = new Discord.MessageEmbed()
         .setColor("#00ff00")
-        .setDescription(`****Ты выиграл ${money} coins\n\nСтавка: 1.5x****`);
+        .setDescription(`****Ты выиграл ${money} <a:money:828644606606180433>\n\nСтавка: 1.5x****`);
         message.channel.send(moneyEmbed2)
     } else if (!isOdd(random) && colour == 0) { // Black
         money = parseInt(money * 2)
         db.add(`money_${message.guild.id}_${user.id}`, money)
         let moneyEmbed3 = new Discord.MessageEmbed()
         .setColor("#00ff00")
-        .setDescription(`****Ты выиграл ${money} coins\n\nСтавка: 2x****`);
+        .setDescription(`****Ты выиграл ${money} <a:money:828644606606180433>\n\nСтавка: 2x****`);
         message.channel.send(moneyEmbed3)
     } else { // Wrong
         db.subtract(`money_${message.guild.id}_${user.id}`, money)
         let moneyEmbed4 = new Discord.MessageEmbed()
         .setColor("#00ff00")
-        .setDescription(`****Ты проиграл ${money} coins\n\nСтавка: 0x****`);
+        .setDescription(`****Ты проиграл ${money} <a:money:828644606606180433>\n\nСтавка: 0x****`);
         message.channel.send(moneyEmbed4)
     }
 }
