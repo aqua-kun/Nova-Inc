@@ -9,7 +9,7 @@ module.exports.run = async(client, message, args) => {
             .setFooter(argss[2])
             .setColor(argss[3]);
             message.channel.send(embed)
-        } message.channel.send("У вас нет прав!")
+        } return;
     } catch(e) {message.channel.send(`Команда использована не правильно! Попробуйте так: \`>>say title;description;footer;color\``); console.log(e) }
 }
 module.exports.config = {
